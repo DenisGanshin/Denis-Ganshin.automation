@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Денис Ганшин — AI-архитектор бизнес-процессов</title>
+  <meta name="description" content="Автоматизирую операционные процессы с помощью AI: боты, парсеры, CRM-интеграции. Экономлю команде 20+ часов в месяц.">
+  <meta property="og:title" content="Денис Ганшин — AI-архитектор бизнес-процессов">
+  <meta property="og:description" content="Автоматизирую операционные процессы с помощью AI: боты, парсеры, CRM-интеграции.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --bg-warm: #f5faf3;
+      --accent: #2d8a56;
+      --accent-hover: #24704a;
+      --accent-soft: #5cb87e;
+      --accent-bg: rgba(45, 138, 86, 0.06);
+      --accent-bg-strong: rgba(45, 138, 86, 0.12);
+      --border-hover: rgba(45, 138, 86, 0.25);
+    }
+    .btn:hover { box-shadow: 0 6px 24px rgba(45, 138, 86, 0.28); }
+    .btn--ghost:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); box-shadow: none; }
+    .contacts__card { background: linear-gradient(135deg, #2d8a56, #5cb87e); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">Денис Ганшин</a>
+      <nav class="header__nav" id="nav">
+        <a href="#services" class="header__link">Продукты</a>
+        <a href="#process" class="header__link">Процесс</a>
+        <a href="#contacts" class="header__link">Контакты</a>
+      </nav>
+      <a href="https://t.me/Vachos" class="btn btn--small header__cta" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Написать
+      </a>
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__badge fade-up">AI-архитектор бизнес-процессов</div>
+          <h1 class="hero__title fade-up">Строю AI&#8209;системы, которые снимают операционку с&nbsp;вашей команды</h1>
+          <ul class="hero__bullets fade-up">
+            <li>AI-парсеры, боты и CRM-интеграции экономят <strong>20+ часов в&nbsp;месяц</strong></li>
+            <li><strong>2–4 недели</strong> от первого созвона до рабочей системы</li>
+            <li>Опыт операционного управления <strong>в 5+ компаниях</strong></li>
+          </ul>
+          <div class="hero__actions fade-up">
+            <a href="#contacts" class="btn">Обсудить задачу</a>
+          </div>
+          <p class="hero__call-info fade-up">На созвоне: разберём ваши процессы, найдём узкие места и предложу конкретные решения для автоматизации.</p>
+        </div>
+        <div class="hero__visual fade-up">
+          <div class="hero__blob"></div>
+          <div class="hero__photo-wrapper">
+            <img src="img/denis/photo-hero.png" alt="Денис Ганшин" width="420" height="420">
+            <div class="hero__photo-decor"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases Carousel -->
+    <div class="container carousel__hint-wrap">
+      <p class="carousel__hint">Нажмите на карточку, чтобы перейти к кейсу</p>
+    </div>
+    <section class="carousel" id="cases" aria-label="Обзор проектов">
+      <div class="carousel__track">
+        <div class="carousel__items">
+          <a href="cases/sales-bot.html" class="ccard">
+            <h3 class="ccard__title">AI-консультант для отдела продаж</h3>
+            <p class="ccard__desc">Бот с базой знаний и CRM. Консультирует 24/7, квалифицирует лидов.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">+23%</span><span class="ccard__label">конверсия</span></div><div class="ccard__metric"><span class="ccard__val">24/7</span><span class="ccard__label">консультации</span></div></div>
+            <div class="ccard__tags"><span>Векторная БД</span><span>CRM</span></div>
+          </a>
+          <a href="cases/personal-assistant.html" class="ccard">
+            <h3 class="ccard__title">Личный AI-ассистент</h3>
+            <p class="ccard__desc">Календарь, email, задачи, заметки, голосовые — один чат в Telegram.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">6+</span><span class="ccard__label">интеграций</span></div><div class="ccard__metric"><span class="ccard__val">−30 мин</span><span class="ccard__label">рутины/день</span></div></div>
+            <div class="ccard__tags"><span>Calendar</span><span>Gmail</span></div>
+          </a>
+          <a href="cases/finance-tracker.html" class="ccard">
+            <h3 class="ccard__title">Финансовый трекер</h3>
+            <p class="ccard__desc">Учёт расходов в Telegram с автокатегоризацией и дашбордом.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">5 сек</span><span class="ccard__label">записать расход</span></div><div class="ccard__metric"><span class="ccard__val">Авто</span><span class="ccard__label">категоризация</span></div></div>
+            <div class="ccard__tags"><span>Telegram</span><span>Дашборд</span></div>
+          </a>
+          <a href="cases/auto-layout.html" class="ccard">
+            <h3 class="ccard__title">Автовёрстка статей</h3>
+            <p class="ccard__desc">Команда отправляет текст — получает страницу в стиле сайта. Без верстальщика.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">2 мин</span><span class="ccard__label">вёрстка</span></div><div class="ccard__metric"><span class="ccard__val">−3 ч</span><span class="ccard__label">экономия</span></div></div>
+            <div class="ccard__tags"><span>Автовёрстка</span><span>Контент</span></div>
+          </a>
+          <a href="cases/seo-pipeline.html" class="ccard">
+            <h3 class="ccard__title">SEO-пайплайн для статей</h3>
+            <p class="ccard__desc">Полуавтоматический пайплайн: анализ выдачи, ТЗ, генерация из базы знаний.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">×4</span><span class="ccard__label">скорость</span></div><div class="ccard__metric"><span class="ccard__val">SEO</span><span class="ccard__label">в топ выдачи</span></div></div>
+            <div class="ccard__tags"><span>Supabase</span><span>RAG</span></div>
+          </a>
+          <a href="cases/cold-outreach.html" class="ccard">
+            <h3 class="ccard__title">Автоматизация холодного аутрича</h3>
+            <p class="ccard__desc">AI-каскад: Email → LinkedIn → Telegram. Персонализация, follow-up, трекинг — автоматически.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">−2 ч</span><span class="ccard__label">рутины/день</span></div><div class="ccard__metric"><span class="ccard__val">×4</span><span class="ccard__label">охват</span></div></div>
+            <div class="ccard__tags"><span>n8n</span><span>Аутрич</span></div>
+          </a>
+          <a href="cases/content-generator.html" class="ccard">
+            <h3 class="ccard__title">AI-генератор контента для соцсетей</h3>
+            <p class="ccard__desc">Голосовое сообщение → готовый пост в Telegram в стиле автора.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">×3</span><span class="ccard__label">быстрее</span></div><div class="ccard__metric"><span class="ccard__val">85%</span><span class="ccard__label">стиль автора</span></div></div>
+            <div class="ccard__tags"><span>Голосовые</span><span>Claude</span></div>
+          </a>
+          <a href="cases/news-channel.html" class="ccard">
+            <h3 class="ccard__title">Автоматический новостной канал</h3>
+            <p class="ccard__desc">Парсинг, оценка релевантности, перевод, автопубликация.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">0 мин</span><span class="ccard__label">ручной работы</span></div><div class="ccard__metric"><span class="ccard__val">24/7</span><span class="ccard__label">публикации</span></div></div>
+            <div class="ccard__tags"><span>Перевод</span><span>Авто</span></div>
+          </a>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="carousel__items" aria-hidden="true">
+          <a href="cases/sales-bot.html" class="ccard">
+            <h3 class="ccard__title">AI-консультант для отдела продаж</h3>
+            <p class="ccard__desc">Бот с базой знаний и CRM. Консультирует 24/7, квалифицирует лидов.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">+23%</span><span class="ccard__label">конверсия</span></div><div class="ccard__metric"><span class="ccard__val">24/7</span><span class="ccard__label">консультации</span></div></div>
+            <div class="ccard__tags"><span>Векторная БД</span><span>CRM</span></div>
+          </a>
+          <a href="cases/personal-assistant.html" class="ccard">
+            <h3 class="ccard__title">Личный AI-ассистент</h3>
+            <p class="ccard__desc">Календарь, email, задачи, заметки, голосовые — один чат в Telegram.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">6+</span><span class="ccard__label">интеграций</span></div><div class="ccard__metric"><span class="ccard__val">−30 мин</span><span class="ccard__label">рутины/день</span></div></div>
+            <div class="ccard__tags"><span>Calendar</span><span>Gmail</span></div>
+          </a>
+          <a href="cases/finance-tracker.html" class="ccard">
+            <h3 class="ccard__title">Финансовый трекер</h3>
+            <p class="ccard__desc">Учёт расходов в Telegram с автокатегоризацией и дашбордом.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">5 сек</span><span class="ccard__label">записать расход</span></div><div class="ccard__metric"><span class="ccard__val">Авто</span><span class="ccard__label">категоризация</span></div></div>
+            <div class="ccard__tags"><span>Telegram</span><span>Дашборд</span></div>
+          </a>
+          <a href="cases/auto-layout.html" class="ccard">
+            <h3 class="ccard__title">Автовёрстка статей</h3>
+            <p class="ccard__desc">Команда отправляет текст — получает страницу в стиле сайта. Без верстальщика.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">2 мин</span><span class="ccard__label">вёрстка</span></div><div class="ccard__metric"><span class="ccard__val">−3 ч</span><span class="ccard__label">экономия</span></div></div>
+            <div class="ccard__tags"><span>Автовёрстка</span><span>Контент</span></div>
+          </a>
+          <a href="cases/seo-pipeline.html" class="ccard">
+            <h3 class="ccard__title">SEO-пайплайн для статей</h3>
+            <p class="ccard__desc">Полуавтоматический пайплайн: анализ выдачи, ТЗ, генерация из базы знаний.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">×4</span><span class="ccard__label">скорость</span></div><div class="ccard__metric"><span class="ccard__val">SEO</span><span class="ccard__label">в топ выдачи</span></div></div>
+            <div class="ccard__tags"><span>Supabase</span><span>RAG</span></div>
+          </a>
+          <a href="cases/cold-outreach.html" class="ccard">
+            <h3 class="ccard__title">Автоматизация холодного аутрича</h3>
+            <p class="ccard__desc">AI-каскад: Email → LinkedIn → Telegram. Персонализация, follow-up, трекинг — автоматически.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">−2 ч</span><span class="ccard__label">рутины/день</span></div><div class="ccard__metric"><span class="ccard__val">×4</span><span class="ccard__label">охват</span></div></div>
+            <div class="ccard__tags"><span>n8n</span><span>Аутрич</span></div>
+          </a>
+          <a href="cases/content-generator.html" class="ccard">
+            <h3 class="ccard__title">AI-генератор контента для соцсетей</h3>
+            <p class="ccard__desc">Голосовое сообщение → готовый пост в Telegram в стиле автора.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">×3</span><span class="ccard__label">быстрее</span></div><div class="ccard__metric"><span class="ccard__val">85%</span><span class="ccard__label">стиль автора</span></div></div>
+            <div class="ccard__tags"><span>Голосовые</span><span>Claude</span></div>
+          </a>
+          <a href="cases/news-channel.html" class="ccard">
+            <h3 class="ccard__title">Автоматический новостной канал</h3>
+            <p class="ccard__desc">Парсинг, оценка релевантности, перевод, автопубликация.</p>
+            <div class="ccard__metrics"><div class="ccard__metric"><span class="ccard__val">0 мин</span><span class="ccard__label">ручной работы</span></div><div class="ccard__metric"><span class="ccard__val">24/7</span><span class="ccard__label">публикации</span></div></div>
+            <div class="ccard__tags"><span>Перевод</span><span>Авто</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__grid fade-up">
+          <div class="about__photo">
+            <img src="img/denis/photo-about.jpg" alt="Денис Ганшин" width="400" height="400">
+          </div>
+          <div class="about__text">
+            <h2 class="section-title" style="margin-bottom:20px; font-size:1.85rem; line-height:1.25">5 лет я строил процессы и управлял операционкой. Теперь автоматизирую её с&nbsp;помощью AI.</h2>
+            <p>Меня зовут Денис. Я прошёл путь от B2B-продаж и видеопродакшна до со-основания туристической компании <a href="https://enjoyers.org/" target="_blank" rel="noopener" style="color:var(--accent)">Enjoyers Travel</a> и операционного управления в&nbsp;Catharsis Group.</p>
+            <p>Внутри своих проектов строил AI-автоматизации — парсеры, CRM-интеграции, ботов для продаж. Теперь внедряю такие системы в&nbsp;проекты клиентов.</p>
+          </div>
+        </div>
+        <div class="about__banner fade-up">
+          <div class="about__banner-item"><span class="about__banner-num">1 000+</span><span class="about__banner-text">проданных мест и 50+ туров в Enjoyers Travel</span></div>
+          <div class="about__banner-item"><span class="about__banner-num">В 4 раза</span><span class="about__banner-text">ускорил создание карточек лидов через интеграцию Bitrix24 + Telegram</span></div>
+          <div class="about__banner-item"><span class="about__banner-num">20 ч/мес</span><span class="about__banner-text">экономит AI-парсер мероприятий, разработанный для Catharsis Group</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems -->
+    <section class="problems" id="problems">
+      <div class="container">
+        <h2 class="section-title fade-up">Когда пора автоматизировать</h2>
+        <div class="problems__grid">
+          <div class="card fade-up">
+            <div class="card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <h3 class="card__title">Хотим расти, но нет ресурсов на команду</h3>
+            <p class="card__text">Хотите больше трафика и лучше конверсию, но каждый дополнительный опытный сотрудник — от $1 500/мес. За автоматизацию платите один раз, дальше — небольшие расходы на поддержку.</p>
+          </div>
+          <div class="card fade-up">
+            <div class="card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3 class="card__title">Сотрудники заняты, но не тем, чем нужно</h3>
+            <p class="card__text">Операционка съедает большую часть времени — задачи по развитию откладываются, а стратегические инициативы не двигаются.</p>
+          </div>
+          <div class="card fade-up">
+            <div class="card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 6h16M4 18h16"/></svg></div>
+            <h3 class="card__title">Все понимают, что это можно автоматизировать</h3>
+            <p class="card__text">Одни и те же действия каждый день: копировать, переносить, проверять, отправлять. Все понимают, что это можно автоматизировать, но нет времени и понимания как это сделать.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title fade-up">Что я делаю</h2>
+        <div class="services__grid">
+          <div class="service-card fade-up"><div class="service-card__number">01</div><h3 class="service-card__title">AI-бот, который не теряет лидов</h3><p class="service-card__text">Отвечает клиентам мгновенно 24/7. Знает все товары и цены, использует ваши скрипты продаж и даже статьи из блога. Квалифицирует лидов и передаёт горячих.</p><a href="cases/sales-bot.html" class="service-card__link">Смотреть кейс &rarr;</a></div>
+          <div class="service-card fade-up"><div class="service-card__number">02</div><h3 class="service-card__title">AI-продукт для привлечения аудитории</h3><p class="service-card__text">Полезные боты и мини-сервисы, которые привлекают аудиторию и собирают лиды. Например: бот для учёта тренировок, ведения финансов или изучения языка.</p><a href="cases/finance-tracker.html" class="service-card__link">Смотреть кейс &rarr;</a></div>
+          <div class="service-card fade-up"><div class="service-card__number">03</div><h3 class="service-card__title">Статьи, которые приводят клиентов</h3><p class="service-card__text">Автоматизация ускоряет производство в&nbsp;4–8&nbsp;раз: исследование, написание, верстку, SEO-оптимизацию.</p><a href="cases/seo-pipeline.html" class="service-card__link">Смотреть кейс &rarr;</a></div>
+          <div class="service-card fade-up"><div class="service-card__number">04</div><h3 class="service-card__title">Личный AI-ассистент</h3><p class="service-card__text">Помнит встречи и задачи, ставит напоминания, пишет письма, фиксирует идеи, ведёт учет расходов — всё из одного чата, голосом.</p><a href="cases/personal-assistant.html" class="service-card__link">Смотреть кейс &rarr;</a></div>
+          <div class="service-card fade-up"><div class="service-card__number">05</div><h3 class="service-card__title">B2B-аутрич без шаблонных сообщений</h3><p class="service-card__text">Парсим контакты по ролям из LinkedIn, анализируем сайт компании и отправляем персонализированные касания: сначала Email, потом LinkedIn и другие каналы связи.</p><a href="cases/cold-outreach.html" class="service-card__link">Смотреть кейс &rarr;</a></div>
+          <div class="service-card fade-up"><div class="service-card__number">06</div><h3 class="service-card__title">Оцифровка бизнеса</h3><p class="service-card__text">Система собирает и анализирует ключевые метрики: конверсию рекламы, стоимость лида, эффективность звонков менеджеров и уведомляет, если показатели падают.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="stack" id="stack">
+      <div class="container">
+        <div class="stack__header fade-up">
+          <h2 class="section-title">Интеграции с сервисами, которыми вы уже пользуетесь</h2>
+          <p class="section-subtitle">Если вашего сервиса нет в списке, это не значит, что я с ним не работаю. Напишите — разберём задачу и посмотрим, реально ли интегрировать.</p>
+        </div>
+        <div class="stack__categories">
+          <div class="stack__category fade-up">
+            <h3 class="stack__cat-title">Мессенджеры</h3>
+            <div class="stack__cat-items">
+              <div class="stack__chip"><div class="stack__icon" style="background:#0088cc"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></div><span>Telegram</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#25d366"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></div><span>WhatsApp</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#e1306c"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div><span>Instagram</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#0077ff"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M6.79 7.3H4.05c.13 6.24 3.25 9.99 8.72 9.99h.31v-3.57c2.01.2 3.53 1.67 4.14 3.57h2.84c-.78-2.84-2.83-4.41-4.11-5.01 1.28-.74 3.08-2.54 3.51-4.98h-2.58c-.56 1.98-2.22 3.78-3.8 3.95V7.3H10.5v6.92c-1.6-.4-3.62-2.34-3.71-6.92Z"/></svg></div><span>VK</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="padding:0;overflow:hidden"><img src="img/icons/max.svg" width="28" height="28" alt="MAX" style="border-radius:50%;display:block"></div><span>MAX</span></div>
+            </div>
+          </div>
+          <div class="stack__category fade-up">
+            <h3 class="stack__cat-title">CRM</h3>
+            <div class="stack__cat-items">
+              <div class="stack__chip"><div class="stack__icon" style="background:#2fc7f7"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm1.334 9.312c0 3.144-4.32 3.768-3.624 6.576h5.136v1.704H3.696c.456-5.592 5.496-4.992 5.448-7.384 0-.672-.432-.96-1.008-.96-.696 0-1.296.384-1.728.768l-.552-1.608c.648-.456 1.584-.888 2.76-.888 2.4 0 3.576 1.224 3.576 2.928l-.024-.024-.84-.048.012.048v-.112zm5.328 8.28h-1.968v-2.712H18.6v-1.224h-1.896v-6.816h-1.176L11.688 13.8v1.08h4.92v2.712h1.968l.024-.048.012.048h.048l.002-.048z"/></svg></div><span>Bitrix24</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#ffd500; color:#333; font-size:0.5rem">amo</div><span>AmoCRM</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#505050"><svg width="14" height="14" viewBox="0 0 48 48" fill="#fff"><path d="M14.228 19.375L22.238 5.5H6.18zm-.89 10.792L27.578 5.5H41.82l-21.362 37z"/></svg></div><span>YClients</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#ff7a59"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/></svg></div><span>HubSpot</span></div>
+            </div>
+          </div>
+          <div class="stack__category fade-up">
+            <h3 class="stack__cat-title">Данные</h3>
+            <div class="stack__cat-items">
+              <div class="stack__chip"><div class="stack__icon" style="background:#34a853"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M11.318 12.545H7.91v-1.909h3.41v1.91zM14.728 0v6h6l-6-6zm1.363 10.636h-3.41v1.91h3.41v-1.91zm0 3.273h-3.41v1.91h3.41v-1.91zM20.727 6.5v15.864c0 .904-.732 1.636-1.636 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.318v6.5h6.5zm-3.273 2.773H6.545v7.909h10.91v-7.91zm-6.136 4.636H7.91v1.91h3.41v-1.91z"/></svg></div><span>Google Sheets</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#1a1a1a"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632"/></svg></div><span>Notion</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#fcb400"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M11.992 1.966c-.434 0-.87.086-1.28.257L1.779 5.917c-.503.208-.49.908.012 1.116l8.982 3.558a3.266 3.266 0 0 0 2.454 0l8.982-3.558c.503-.196.503-.908.012-1.116l-8.957-3.694a3.255 3.255 0 0 0-1.272-.257zM23.4 8.056a.589.589 0 0 0-.222.045l-10.012 3.877a.612.612 0 0 0-.38.564v8.896a.6.6 0 0 0 .821.552L23.62 18.1a.583.583 0 0 0 .38-.551V8.653a.6.6 0 0 0-.6-.596zM.676 8.095a.644.644 0 0 0-.48.19C.086 8.396 0 8.53 0 8.69v8.355c0 .442.515.737.908.54l6.27-3.006.307-.147 2.969-1.436c.466-.22.43-.908-.061-1.092L.883 8.138a.57.57 0 0 0-.207-.044z"/></svg></div><span>Airtable</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#3ecf8e"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"/></svg></div><span>Supabase</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#ff3365"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v4c0 1.657 3.582 3 8 3s8-1.343 8-3V6"/><path d="M4 10v4c0 1.657 3.582 3 8 3s8-1.343 8-3v-4"/></svg></div><span>Qdrant</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#0052cc"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="4" rx="1"/></svg></div><span>Trello</span></div>
+            </div>
+          </div>
+          <div class="stack__category fade-up">
+            <h3 class="stack__cat-title">Коммуникации</h3>
+            <div class="stack__cat-items">
+              <div class="stack__chip"><div class="stack__icon" style="background:#ea4335"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></div><span>Gmail</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="padding:0;overflow:hidden"><img src="img/icons/unisender.svg" width="28" height="28" alt="UniSender" style="border-radius:50%;display:block;object-fit:cover"></div><span>UniSender</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#009fc1"><svg width="14" height="14" viewBox="29.5 29.5 300 300" fill="#fff"><path d="M147.3,280h-25.9l-18.3-75.1H68.5v-24.2h57.1l9.5,39.8L172.6,79h26.7l13,106.6h29.1c4.4-8,13-13.4,23-13.4c14.4,0,26,11.3,26,25.4c0,14-11.7,25.4-26,25.4c-10,0-18.4-5.4-23-13.4h-52.8l-7.8-53.8L147.3,280z"/></svg></div><span>SendPulse</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="padding:0;overflow:hidden"><img src="img/icons/mango-office.svg" width="28" height="28" alt="Mango Office" style="border-radius:50%;display:block"></div><span>Mango Office</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#00b67a;font-size:0.45rem;font-weight:700;color:#fff">edna</div><span>Edna</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#4c6fff;font-size:0.45rem;font-weight:700;color:#fff">Um</div><span>Umnico</span></div>
+            </div>
+          </div>
+          <div class="stack__category fade-up">
+            <h3 class="stack__cat-title">Аналитика</h3>
+            <div class="stack__cat-items">
+              <div class="stack__chip"><div class="stack__icon" style="background:#f9ab00"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6477-1.5558-2.6105-3.1V3.1204c-.0369-1.5458 1.0856-2.8762 2.6157-3.1 1.6361-.1915 3.1178.9796 3.3093 2.6158.014.1201.0208.241.0202.3619zM4.1326 18.0548c-1.6417 0-2.9726 1.331-2.9726 2.9726C1.16 22.6691 2.4909 24 4.1326 24s2.9726-1.3309 2.9726-2.9726-1.331-2.9726-2.9726-2.9726zm7.8728-9.0098c-.0171 0-.0342 0-.0513.0003-1.6495.0904-2.9293 1.474-2.891 3.1256v7.9846c0 2.167.9535 3.4825 2.3505 3.763 1.6118.3266 3.1832-.7152 3.5098-2.327.04-.1974.06-.3983.0593-.5998v-8.9585c.003-1.6474-1.33-2.9852-2.9773-2.9882z"/></svg></div><span>Google Analytics</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#fc3f1d"><svg width="14" height="14" viewBox="0 0 14 26" fill="#fff"><path d="M7.93 25.01v-8.02L13.82 0h-2.5l-4.6 13.57L2.73 2.35H0L5.42 16.9v8.11z"/></svg></div><span>Яндекс.Метрика</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#0866ff"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></div><span>Facebook Ads</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="padding:0;overflow:hidden;background:#1eb0cd"><img src="img/icons/calltouch.svg" width="28" height="28" alt="Calltouch" style="border-radius:50%;display:block"></div><span>Calltouch</span></div>
+            </div>
+          </div>
+          <div class="stack__category fade-up">
+            <h3 class="stack__cat-title">Автоматизация</h3>
+            <div class="stack__cat-items">
+              <div class="stack__chip"><div class="stack__icon" style="background:#ff6d00;font-size:0.45rem;font-weight:700;color:#fff;letter-spacing:-.3px">n8n</div><span>n8n</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#cc785c"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span>Claude Code</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#1e1e2e"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8l4 4-4 4"/><line x1="13" y1="16" x2="17" y2="16"/></svg></div><span>OpenCode</span></div>
+            </div>
+          </div>
+          <div class="stack__category fade-up">
+            <h3 class="stack__cat-title">Платежи</h3>
+            <div class="stack__cat-items">
+              <div class="stack__chip"><div class="stack__icon" style="background:#635bff"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-7.076-2.19l-.893 5.575C4.746 22.87 7.772 24 11.342 24c2.627 0 4.753-.678 6.266-1.961 1.612-1.356 2.457-3.314 2.457-5.672 0-4.137-2.516-5.822-6.089-7.217z"/></svg></div><span>Stripe</span></div>
+              <div class="stack__chip"><div class="stack__icon" style="background:#8b3ffd;font-size:0.5rem;font-weight:700;color:#fff;letter-spacing:-.3px">ЮК</div><span>ЮКасса</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="section-subtitle fade-up" style="margin-top:20px; margin-bottom:0;">+ интеграции с любыми сервисами через API</p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+      <div class="container">
+        <h2 class="section-title fade-up">Как выглядит процесс на примере создания бота</h2>
+        <p class="section-subtitle fade-up">От первого разговора до работающей системы — 2–4&nbsp;недели</p>
+        <div class="process__snake">
+          <!-- Row 1: 0 → 1 → 2 -->
+          <div class="process__row process__row--top">
+            <div class="tstep fade-up">
+              <div class="tstep__marker"><span class="tstep__num">1</span></div>
+              <div class="tstep__content">
+                <div class="tstep__head"><h3 class="tstep__title">Вводный созвон и ТЗ</h3><span class="tstep__days">1–2 дня</span></div>
+                <p class="tstep__text">Смотрим внутреннюю существующую инфраструктуру, бизнес-процессы, составляем ТЗ, фиксируем цену и формат оплаты</p>
+              </div>
+            </div>
+            <div class="tstep fade-up">
+              <div class="tstep__marker"><span class="tstep__num">2</span></div>
+              <div class="tstep__content">
+                <div class="tstep__head"><h3 class="tstep__title">Первый этап разработки</h3><span class="tstep__days">3 дня</span></div>
+                <p class="tstep__text">Поднимаем сервер, создаём базу знаний, подключаем бота в Telegram для тестирования</p>
+              </div>
+            </div>
+            <div class="tstep fade-up">
+              <div class="tstep__marker"><span class="tstep__num">3</span></div>
+              <div class="tstep__content">
+                <div class="tstep__head"><h3 class="tstep__title">Тестирование</h3><span class="tstep__days">2–3 дня</span></div>
+                <p class="tstep__text">Команда заказчика тестирует бота и даёт правки</p>
+              </div>
+            </div>
+          </div>
+          <!-- Row 2: 4 → 5 → 6 -->
+          <div class="process__row process__row--bottom">
+            <div class="tstep fade-up">
+              <div class="tstep__marker"><span class="tstep__num">4</span></div>
+              <div class="tstep__content">
+                <div class="tstep__head"><h3 class="tstep__title">Финальная настройка и сдача</h3><span class="tstep__days">2–3 дня</span></div>
+                <p class="tstep__text">После внесения всех правок подключаем остальные каналы связи (если нужно) и финально тестируем</p>
+              </div>
+            </div>
+            <div class="tstep fade-up">
+              <div class="tstep__marker"><span class="tstep__num">5</span></div>
+              <div class="tstep__content">
+                <div class="tstep__head"><h3 class="tstep__title">Поддержка</h3><span class="tstep__days">1 месяц</span></div>
+                <p class="tstep__text">После сдачи я ещё месяц мониторю качество ответов и вношу правки в бота</p>
+              </div>
+            </div>
+            <div class="tstep fade-up">
+              <div class="tstep__marker"><span class="tstep__num">6</span></div>
+              <div class="tstep__content">
+                <h3 class="tstep__title">Дальнейшее сотрудничество</h3>
+                <p class="tstep__text">При появлении новых задач можем перейти на парт-тайм или продолжить работать проектно, по необходимости</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Formats -->
+    <section class="formats" id="formats">
+      <div class="container">
+        <h2 class="section-title fade-up">Форматы работы</h2>
+        <p class="section-subtitle fade-up">Оплата возможна в рублях, тенге или криптовалюте</p>
+        <div class="formats__grid">
+          <div class="format-card fade-up">
+            <h3 class="format-card__title">Консультация</h3>
+            <p class="format-card__text">Помогаю понять, где и как ИИ может упростить именно вашу работу. Работаю как с конкретными запросами, так и с общим аудитом ваших процессов для их оптимизации.</p>
+            <ul class="format-card__list">
+              <li>Созвон на 1 час</li>
+              <li>Анализ процессов и рекомендации</li>
+              <li>Конкретный план внедрения</li>
+            </ul>
+            <div class="format-card__price">$200</div>
+          </div>
+          <div class="format-card fade-up">
+            <h3 class="format-card__title">Проектная работа</h3>
+            <p class="format-card__text">Разовый проект с фиксированным ТЗ и стоимостью. Идеально, если нужно запустить конкретную систему — бота, пайплайн, автоматизацию.</p>
+            <ul class="format-card__list">
+              <li>Фиксированная цена и сроки</li>
+              <li>ТЗ до старта работы</li>
+              <li>Результат — работающая система</li>
+            </ul>
+            <div class="format-card__price">$500 – $2 000 <span>за проект</span></div>
+          </div>
+          <div class="format-card fade-up">
+            <h3 class="format-card__title">Постоянное сопровождение</h3>
+            <p class="format-card__text">Part-time сотрудничество на 5–20 часов в неделю. Подходит, если задач много и нужен человек, который ведёт все AI-процессы.</p>
+            <ul class="format-card__list">
+              <li>Поддержка и доработка систем</li>
+              <li>Решение новых задач по мере роста</li>
+            </ul>
+            <div class="format-card__price">$30 <span>в час</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="section-title fade-up">Частые вопросы</h2>
+        <p class="section-subtitle fade-up">То, что обычно спрашивают перед стартом</p>
+        <div class="faq__list">
+          <details class="faq__item fade-up">
+            <summary class="faq__question">Сколько стоит внедрение?</summary>
+            <div class="faq__answer">Зависит от сложности. Простой бот-консультант — от $500. API-интеграции сервисов между собой (CRM с мессенджерами, построение баз данных, подключение аналитики) — от $2 000. Точную цену фиксируем после первого созвона и составления ТЗ, до начала работы вы знаете финальную сумму.</div>
+          </details>
+          <details class="faq__item fade-up">
+            <summary class="faq__question">А что если AI будет отвечать ерунду?</summary>
+            <div class="faq__answer">Языковые модели действительно склонны к галлюцинациям. Именно поэтому мы уделяем особое внимание тестированию: проверяем ответы на реальных сценариях, настраиваем промпты и базу знаний так, чтобы вероятность некорректного ответа сводилась к минимуму. Если вопрос выходит за рамки базы знаний, бот честно скажет, что не знает, и переведёт на менеджера.</div>
+          </details>
+          <details class="faq__item fade-up">
+            <summary class="faq__question">Мы в России — какие есть ограничения по сервисам?</summary>
+            <div class="faq__answer">Работаю с сервисами, доступными в РФ. При необходимости данные могут храниться на российских серверах — обсудим конфигурацию под ваш случай.</div>
+          </details>
+          <details class="faq__item fade-up">
+            <summary class="faq__question">Что будет, если что-то сломается после запуска?</summary>
+            <div class="faq__answer">После запуска я обучаю вашу команду работе с системой — обычно этого достаточно. В стоимость разработки включена поддержка в течение первого месяца эксплуатации: если что-то не соответствует ТЗ — разберусь и починю. Если нужна новая функциональность или регулярные доработки, можем работать в формате постоянного сопровождения.</div>
+          </details>
+          <details class="faq__item fade-up">
+            <summary class="faq__question">Мне нужно что-то понимать в AI?</summary>
+            <div class="faq__answer">Не обязательно. Достаточно рассказать, как устроены ваши процессы и что хочется улучшить. Техническую часть — от выбора инструментов до настройки — беру на себя.</div>
+          </details>
+          <details class="faq__item fade-up">
+            <summary class="faq__question">Будут ли закрывающие документы?</summary>
+            <div class="faq__answer">Напишите, для какой юрисдикции вам нужны закрывающие документы, и я отвечу, смогу ли их предоставить.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA + Contacts -->
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <div class="contacts__card fade-up">
+          <h2 class="contacts__title">Давайте обсудим ваш проект</h2>
+          <p class="contacts__subtitle">Бесплатный созвон — 30 минут. Разберём процессы и найдём, где AI принесёт максимум пользы.</p>
+          <div class="contacts__buttons">
+            <a href="https://t.me/Vachos" class="btn btn--white" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg> Написать в Telegram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases Bento Grid -->
+    <section class="cases" id="portfolio">
+      <div class="container">
+        <h2 class="section-title fade-up">Кейсы</h2>
+        <p class="section-subtitle fade-up">Реальные системы, которые уже запущены в работу</p>
+        <div class="cases__bento">
+
+          <div class="case-card fade-up">
+            <h3 class="case-card__title">AI-консультант для отдела продаж</h3>
+            <p class="case-card__desc">Бот для туркомпании: знает все туры, цены, даты. Отвечает клиентам в мессенджерах, квалифицирует лидов и передаёт горячих — менеджерам.</p>
+            <div class="case-card__metrics"><div class="metric"><span class="metric__value">+23%</span><span class="metric__label">конверсия</span></div><div class="metric"><span class="metric__value">24/7</span><span class="metric__label">на связи</span></div></div>
+            <div class="case-card__tags"><span class="tag">Векторная БД</span><span class="tag">CRM</span></div>
+            <a href="cases/sales-bot.html" class="case-card__link">Подробнее &rarr;</a>
+          </div>
+
+          <div class="case-card fade-up">
+            <h3 class="case-card__title">Личный AI-ассистент</h3>
+            <p class="case-card__desc">Календарь, почта, задачи, заметки — всё через один чат в Telegram. Говоришь голосом — он делает.</p>
+            <div class="case-card__metrics"><div class="metric"><span class="metric__value">6+</span><span class="metric__label">интеграций</span></div><div class="metric"><span class="metric__value">−30 мин</span><span class="metric__label">рутины/день</span></div></div>
+            <div class="case-card__tags"><span class="tag">Calendar</span><span class="tag">Gmail</span></div>
+            <a href="cases/personal-assistant.html" class="case-card__link">Подробнее &rarr;</a>
+          </div>
+
+          <div class="case-card fade-up">
+            <h3 class="case-card__title">SEO-пайплайн для статей</h3>
+            <p class="case-card__desc">Полуавтоматический процесс: сбор семантики, написание из базы знаний, fact-check, автовёрстка.</p>
+            <div class="case-card__metrics"><div class="metric"><span class="metric__value">×4</span><span class="metric__label">быстрее</span></div><div class="metric"><span class="metric__value">SEO</span><span class="metric__label">оптимизировано</span></div></div>
+            <div class="case-card__tags"><span class="tag">Supabase</span><span class="tag">SEO</span></div>
+            <a href="cases/seo-pipeline.html" class="case-card__link">Подробнее &rarr;</a>
+          </div>
+
+          <div class="case-card fade-up">
+            <h3 class="case-card__title">Автовёрстка статей</h3>
+            <p class="case-card__desc">Загружаешь текст — получаешь свёрстанную страницу в нужном стиле. 2 минуты вместо 1–3 часов.</p>
+            <div class="case-card__metrics"><div class="metric"><span class="metric__value">2 мин</span><span class="metric__label">вёрстка</span></div><div class="metric"><span class="metric__value">−3 ч</span><span class="metric__label">экономия</span></div></div>
+            <div class="case-card__tags"><span class="tag">Автовёрстка</span><span class="tag">HTML/CSS</span></div>
+            <a href="cases/auto-layout.html" class="case-card__link">Подробнее &rarr;</a>
+          </div>
+
+          <div class="case-card fade-up">
+            <h3 class="case-card__title">Финансовый трекер</h3>
+            <p class="case-card__desc">Пишешь «55 кофе» в Telegram — бот сам разбирает сумму, категорию, валюту и кладёт в дашборд.</p>
+            <div class="case-card__metrics"><div class="metric"><span class="metric__value">5 сек</span><span class="metric__label">записать расход</span></div><div class="metric"><span class="metric__value">Авто</span><span class="metric__label">категоризация</span></div></div>
+            <div class="case-card__tags"><span class="tag">Telegram</span><span class="tag">Sheets</span></div>
+            <a href="cases/finance-tracker.html" class="case-card__link">Подробнее &rarr;</a>
+          </div>
+
+          <div class="case-card fade-up">
+            <h3 class="case-card__title">Автоматизация холодного аутрича</h3>
+            <p class="case-card__desc">AI-каскад через 3 канала: Email → LinkedIn → Telegram. Персонализация каждого сообщения, автоматические follow-up, трекинг&nbsp;ответов.</p>
+            <div class="case-card__metrics"><div class="metric"><span class="metric__value">−2 ч</span><span class="metric__label">рутины/день</span></div><div class="metric"><span class="metric__value">×4</span><span class="metric__label">охват</span></div></div>
+            <div class="case-card__tags"><span class="tag">n8n</span><span class="tag">Аутрич</span></div>
+            <a href="cases/cold-outreach.html" class="case-card__link">Подробнее &rarr;</a>
+          </div>
+
+          <div class="case-card fade-up">
+            <h3 class="case-card__title">AI-генератор контента</h3>
+            <p class="case-card__desc">Надиктовал мысль голосовым — получил готовый пост в своём стиле. Бот обучен на примерах автора.</p>
+            <div class="case-card__metrics"><div class="metric"><span class="metric__value">×3</span><span class="metric__label">быстрее</span></div><div class="metric"><span class="metric__value">85%</span><span class="metric__label">стиль автора</span></div></div>
+            <div class="case-card__tags"><span class="tag">Голосовые</span><span class="tag">Claude</span></div>
+            <a href="cases/content-generator.html" class="case-card__link">Подробнее &rarr;</a>
+          </div>
+
+          <div class="case-card fade-up">
+            <h3 class="case-card__title">Автоматический новостной канал</h3>
+            <p class="case-card__desc">Парсит 15+ источников, AI оценивает релевантность, переводит и публикует в Telegram. Без редактора.</p>
+            <div class="case-card__metrics"><div class="metric"><span class="metric__value">0 мин</span><span class="metric__label">ручной работы</span></div><div class="metric"><span class="metric__value">24/7</span><span class="metric__label">публикации</span></div></div>
+            <div class="case-card__tags"><span class="tag">Парсинг</span><span class="tag">Перевод</span></div>
+            <a href="cases/news-channel.html" class="case-card__link">Подробнее &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; 2026 Денис Ганшин</span>
+      <span class="footer__role">AI-архитектор бизнес-процессов</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

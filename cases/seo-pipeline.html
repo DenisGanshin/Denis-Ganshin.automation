@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO-пайплайн для статей — кейс | Денис Ганшин</title>
+  <meta name="description" content="Полный цикл создания SEO-статей: сбор семантики, research конкурентов, написание из базы знаний, fact-check, tone-check.">
+  <meta property="og:title" content="SEO-пайплайн для статей — кейс">
+  <meta property="og:description" content="Полный цикл создания SEO-статей: сбор семантики, research конкурентов, написание из базы знаний, fact-check.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case.css?v=6">
+  <style>
+    :root {
+      --bg-warm: #f5faf3;
+      --accent: #2d8a56;
+      --accent-hover: #24704a;
+      --accent-soft: #5cb87e;
+      --accent-bg: rgba(45, 138, 86, 0.06);
+      --accent-bg-strong: rgba(45, 138, 86, 0.12);
+      --border-hover: rgba(45, 138, 86, 0.25);
+    }
+    .btn:hover { box-shadow: 0 6px 24px rgba(45, 138, 86, 0.28); }
+    .btn--ghost:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); box-shadow: none; }
+    .contacts__card { background: linear-gradient(135deg, #2d8a56, #5cb87e); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="header__logo">Денис Ганшин</a>
+      <a href="../index.html#portfolio" class="header__back">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+        Назад к кейсам
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. Hero -->
+    <section class="case-hero">
+      <div class="container container--narrow">
+        <div class="fade-up">
+          <div class="case-hero__inner">
+            <h1 class="case-hero__title">SEO&#8209;пайплайн для&nbsp;статей</h1>
+            <p class="case-hero__subtitle">Полный цикл: сбор семантики, анализ конкурентов, написание из базы знаний, автоматический fact&#8209;check и tone&#8209;check. Человек добавляет экспертизу.</p>
+            <div class="case-hero__metrics">
+              <div class="case-hero__metric">
+                <span class="case-hero__metric-value">×4</span>
+                <span class="case-hero__metric-label">быстрее</span>
+              </div>
+              <div class="case-hero__metric">
+                <span class="case-hero__metric-value">SEO</span>
+                <span class="case-hero__metric-label">оптимизировано</span>
+              </div>
+              <div class="case-hero__metric">
+                <span class="case-hero__metric-value">Фактчекинг</span>
+                <span class="case-hero__metric-label">по базе знаний</span>
+              </div>
+            </div>
+            <div class="case-hero__tags">
+              <span class="tag">Supabase</span>
+              <span class="tag">Serpstat API</span>
+              <span class="tag">Perplexity</span>
+              <span class="tag">Claude Code</span>
+              <span class="tag">n8n</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Проблема + Решение -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <div class="problem-solution fade-up">
+          <div class="problem-solution__col">
+            <span class="problem-solution__badge problem-solution__badge--problem">Проблема</span>
+            <ul class="problem-bullets">
+              <li>У компании нет большого количества ресурсов на контент-маркетинг, при этом есть потенциал для привлечения трафика и&nbsp;клиентов</li>
+              <li>При ручном процессе создания и вёрстки статей компания могла выпускать только 1–2 статьи в месяц — этого недостаточно для целей по&nbsp;развитию</li>
+              <li>С ускорением процессов компания планирует выпускать 6–8 статей в&nbsp;месяц</li>
+            </ul>
+          </div>
+          <div class="problem-solution__divider"></div>
+          <div class="problem-solution__col">
+            <span class="problem-solution__badge problem-solution__badge--solution">Решение</span>
+            <p class="problem-solution__text">Полуавтоматический процесс создания статей сокращает время до 2–3 часов. Основное время уходит на запись голосовых с экспертной информацией, редактуру готовой статьи и отбор фотографий из базы фото, собранной с помощью AI на основе источников компании.</p>
+            <p class="problem-solution__text">Предварительно проводится автоматический сбор семантики из трёх источников (Serpstat API, Google Suggest, Wordstat) + анализ ТОП-10 выдачи через Perplexity. Система находит пробелы у конкурентов и формирует уникальный угол. На основе этого составлен контент-план на 3&nbsp;месяца.</p>
+            <p class="problem-solution__text">Статья пишется с опорой на векторную базу знаний в Supabase — проверенные локации, цены, маршруты. Каждый факт проходит автоматический fact-check. Текст проверяется на соответствие Tone of Voice — разработаны принципы, чтобы текст не звучал как&nbsp;AI.</p>
+            <p class="problem-solution__text">На выходе добавляются SEO-метаданные, в процессе написания происходит перелинковка с другими статьями. Также настроена <a href="auto-layout.html" style="color:var(--accent)">автовёрстка</a> — статья сразу получает готовый код страницы.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Схема процесса -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <h2 class="case-section__title fade-up">Как устроен процесс</h2>
+        <div class="fade-up">
+          <img src="../img/seo-pipeline-process.png" alt="Схема процесса создания статей: ввод данных → исследование → архитектура → черновик → AI-контроль → ревью человеком → вёрстка" style="width:100%;border-radius:var(--r-lg);" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Результат: трафик статьи -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <h2 class="case-section__title fade-up">Результат</h2>
+        <div class="fade-up" style="margin-bottom:16px;">
+          <p style="font-size:0.95rem;line-height:1.6;color:var(--text-secondary);margin-bottom:16px;">Первая статья, написанная по этому процессу, — <a href="https://enjoyers.org/almaty-zimoy" target="_blank" rel="noopener" style="color:var(--accent)">«Алматы зимой»</a> — стала драйвером SEO-трафика сайта. За 3 месяца статья набрала ~3 600 переходов из поиска. До этого средний трафик сайта со всех статей составлял ~700 пользователей в&nbsp;месяц.</p>
+          <img src="../img/seo-pipeline-traffic.png" alt="График трафика статьи «Алматы зимой» — ~3 600 переходов из поиска за 3 месяца" style="width:100%;border-radius:var(--r-lg);border:1px solid var(--border);" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Стек технологий (перед функциональностью) -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <h2 class="case-section__title fade-up">Стек технологий</h2>
+
+        <h3 class="stack-group-title fade-up">Стандартно</h3>
+        <div class="stack-detail">
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#d97706">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Написание + редактура + вёрстка</span>
+              <span class="stack-detail__name">Claude Code</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#ff6d00">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M12 4v16"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Автоматизация</span>
+              <span class="stack-detail__name">n8n</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="stack-group-title fade-up">Специфика проекта</h3>
+        <div class="stack-detail">
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#ff6b35">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Семантика + SERP</span>
+              <span class="stack-detail__name">Serpstat API, Google Suggest, Wordstat</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#5b6abf">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Анализ SERP + контент-ресёрч</span>
+              <span class="stack-detail__name">Perplexity API</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#3ECF8E">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Векторная БД знаний</span>
+              <span class="stack-detail__name">Supabase</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#000000">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Публикация</span>
+              <span class="stack-detail__name">Tilda</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Функциональность (2 колонки) -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <h2 class="case-section__title fade-up">Функциональность</h2>
+        <div class="impl-blocks impl-blocks--grid">
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <h3 class="impl-block__title">SEO-исследование</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Сбор семантики из Serpstat API, Google Suggest, Wordstat</li>
+              <li>Анализ ТОП-10 SERP через Perplexity — структура, объём, пробелы у конкурентов</li>
+              <li>Составление контент-плана на 3 месяца на основе исследования</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <h3 class="impl-block__title">Gap Analysis + Intent</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Определяет пробелы: что нужно спросить у автора, у экспертов</li>
+              <li>Формулирует уникальный угол статьи vs SERP</li>
+              <li>Генерирует план с обоснованием каждого блока</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 class="impl-block__title">Написание статьи</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Статья пишется с опорой на базу знаний в Supabase — проверенные локации, цены, маршруты</li>
+              <li>Экспертная информация добавляется через голосовые записи автора</li>
+              <li>Tone of Voice зашит в процесс — текст не звучит как AI</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+              <h3 class="impl-block__title">Фото</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>База фото собрана с AI на основе источников компании</li>
+              <li>GPS-привязка к локациям — фотографии подбираются автоматически</li>
+              <li>Редактор выбирает финальные фото из предложенных</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 class="impl-block__title">Fact-check + Tone-check</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Автоматическая проверка фактов по чанкам: цены, расстояния, статистика</li>
+              <li>Сверка с векторной базой — если данные устарели, уходят на ревью</li>
+              <li>Tone-check: удаление канцелярита, восторгов, AI-шаблонов</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <h3 class="impl-block__title">Финализация + публикация</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>SEO-метаданные: title, description — автоматически из research</li>
+              <li>Перелинковка с другими статьями в процессе написания</li>
+              <li><a href="auto-layout.html" style="color:var(--accent)">Автовёрстка</a> — статья сразу получает готовый код страницы для загрузки на&nbsp;сайт</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CTA -->
+    <section class="case-cta">
+      <div class="container container--narrow">
+        <div class="case-cta__card fade-up">
+          <h2 class="case-cta__title">Нужен контент-пайплайн?</h2>
+          <p class="case-cta__text">Расскажите о задаче — покажу, как ускорить производство контента</p>
+          <div class="case-cta__buttons">
+            <a href="https://t.me/Vachos" class="btn btn--white" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              Обсудить в Telegram
+            </a>
+            <a href="mailto:denis.ganshin@enjoyers.org" class="btn btn--white-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; 2025–2026 Денис Ганшин</span>
+      <span class="footer__role">AI-архитектор бизнес-процессов</span>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Header scroll effect
+      const header = document.getElementById('header');
+      const onScroll = () => {
+        header.classList.toggle('header--scrolled', window.scrollY > 10);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Intersection Observer animations
+      const elements = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (!entry.isIntersecting) return;
+              const parent = entry.target.parentElement;
+              const siblings = [...parent.querySelectorAll(':scope > .fade-up')];
+              const idx = siblings.filter(s => !s.classList.contains('visible')).indexOf(entry.target);
+              entry.target.style.transitionDelay = `${Math.max(0, idx) * 70}ms`;
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+        );
+        elements.forEach(el => observer.observe(el));
+      } else {
+        elements.forEach(el => el.classList.add('visible'));
+      }
+    });
+  </script>
+
+<script src="lightbox.js"></script>
+<script src="gallery-nav.js"></script>
+</body>
+</html>

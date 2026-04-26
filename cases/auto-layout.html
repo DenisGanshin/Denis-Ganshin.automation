@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автовёрстка статей — кейс | Денис Ганшин</title>
+  <meta name="description" content="Автоматизация вёрстки статей: контент-менеджер отправляет текст — система возвращает готовую страницу в стиле сайта.">
+  <meta property="og:title" content="Автовёрстка статей — кейс">
+  <meta property="og:description" content="Автоматизация вёрстки статей: контент-менеджер отправляет текст — система возвращает готовую страницу в стиле сайта.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case.css?v=6">
+  <style>
+    :root {
+      --bg-warm: #f5faf3;
+      --accent: #2d8a56;
+      --accent-hover: #24704a;
+      --accent-soft: #5cb87e;
+      --accent-bg: rgba(45, 138, 86, 0.06);
+      --accent-bg-strong: rgba(45, 138, 86, 0.12);
+      --border-hover: rgba(45, 138, 86, 0.25);
+    }
+    .btn:hover { box-shadow: 0 6px 24px rgba(45, 138, 86, 0.28); }
+    .btn--ghost:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); box-shadow: none; }
+    .contacts__card { background: linear-gradient(135deg, #2d8a56, #5cb87e); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="header__logo">Денис Ганшин</a>
+      <a href="../index.html#portfolio" class="header__back">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+        Назад к кейсам
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. Hero: слева карточка, справа мокап -->
+    <section class="case-hero">
+      <div class="container container--narrow">
+        <div class="case-hero__grid fade-up">
+          <div class="case-hero__inner">
+            <h1 class="case-hero__title">Автовёрстка статей</h1>
+            <p class="case-hero__subtitle">Контент-менеджер отправляет текст — получает код, который остаётся только загрузить. Страница соответствует стилю сайта. Подходит для Tilda и кастомных сайтов.</p>
+            <div class="case-hero__metrics">
+              <div class="case-hero__metric">
+                <span class="case-hero__metric-value">5 мин</span>
+                <span class="case-hero__metric-label">вместо 1–3 ч</span>
+              </div>
+            </div>
+            <div class="case-hero__tags">
+              <span class="tag">Claude Code</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Markdown</span>
+              <span class="tag">Tilda</span>
+            </div>
+          </div></div>
+      </div>
+    </section>
+
+    <!-- 2. Проблема + Решение -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <div class="problem-solution fade-up">
+          <div class="problem-solution__col">
+            <span class="problem-solution__badge problem-solution__badge--problem">Проблема</span>
+            <p class="problem-solution__text">У компании нет большого количества ресурсов на контент-маркетинг, при этом SEO-исследование показало потенциал для привлечения трафика и&nbsp;клиентов. Контент-маркетолог тратит время на вёрстку, хотя мог&nbsp;бы заниматься задачами, которые приносят больше денег компании.</p>
+            <p class="problem-solution__text">При ручном процессе создания и вёрстки статей компания могла выпускать только 1–2 статьи в месяц — этого недостаточно для целей по&nbsp;развитию.</p>
+          </div>
+          <div class="problem-solution__divider"></div>
+          <div class="problem-solution__col">
+            <span class="problem-solution__badge problem-solution__badge--solution">Решение</span>
+            <p class="problem-solution__text">В этом проекте уже выстроены <a href="seo-pipeline.html" style="color:var(--accent)">полуавтоматические процессы создания статей</a> — автовёрстка является одним из этапов.</p>
+            <p class="problem-solution__text">После того как редактор принимает статью, Claude Code автоматически верстает её и выдаёт код, готовый к загрузке. Это происходит сразу — никому не нужно тратить время на вёрстку. Остаётся только загрузить на&nbsp;сайт.</p>
+            <p class="problem-solution__text">С ускорением процессов компания планирует выпускать 6–8 статей в месяц.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Примеры статей -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <h2 class="case-section__title fade-up">Примеры статей</h2>
+        <div class="impl-blocks impl-blocks--grid" style="grid-template-columns:1fr 1fr;">
+          <a href="https://enjoyers.org/almaty-zimoy" target="_blank" rel="noopener" class="impl-block fade-up" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;">
+            <img src="../img/og-almaty-zimoy.webp" alt="Алматы зимой" style="width:100%;aspect-ratio:504/264;object-fit:cover;display:block;" onerror="this.style.display='none'">
+            <div style="padding:16px 20px 20px;">
+              <h3 class="impl-block__title" style="margin-bottom:6px;">Алматы зимой: 30 мест, куда сходить и что&nbsp;посмотреть</h3>
+              <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.5;margin-bottom:10px;">Достопримечательности Алматы зимой: где погулять, какие музеи посетить, куда съездить в поход и за&nbsp;город</p>
+              <span style="font-size:0.8rem;color:var(--accent);font-weight:500;">enjoyers.org &rarr;</span>
+            </div>
+          </a>
+          <a href="https://enjoyers.org/blog/nauryz-2026-almaty-guide" target="_blank" rel="noopener" class="impl-block fade-up" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;">
+            <img src="../img/og-nauryz-2026.webp" alt="Наурыз 2026" style="width:100%;aspect-ratio:504/264;object-fit:cover;display:block;" onerror="this.style.display='none'">
+            <div style="padding:16px 20px 20px;">
+              <h3 class="impl-block__title" style="margin-bottom:6px;">Куда поехать на Наурыз 2026 из&nbsp;Алматы: 6&nbsp;направлений</h3>
+              <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.5;margin-bottom:10px;">6 направлений из Алматы на Наурыз: от этноаула за 35 км до Кольсайских озёр за 300&nbsp;км</p>
+              <span style="font-size:0.8rem;color:var(--accent);font-weight:500;">enjoyers.org &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Стек технологий (перед функциональностью) -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <h2 class="case-section__title fade-up">Стек технологий</h2>
+        <div class="stack-detail">
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#1a1a1a">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Инструмент</span>
+              <span class="stack-detail__name">Claude Code</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#e44d26">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Выход</span>
+              <span class="stack-detail__name">HTML / CSS</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#333333">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Источник</span>
+              <span class="stack-detail__name">Markdown / Google Docs</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#ff6d00">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Публикация</span>
+              <span class="stack-detail__name">Tilda / свой сайт</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Функциональность (2 колонки) -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <h2 class="case-section__title fade-up">Функциональность</h2>
+        <div class="impl-blocks impl-blocks--grid">
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h3 class="impl-block__title">Приём контента</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Принимает Markdown, Google Docs или другой формат</li>
+              <li>Определяет заголовки, списки, цитаты, изображения</li>
+              <li>Строит структуру секций автоматически</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="impl-block__title">Генерация HTML</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Применяет CSS-шаблон к структуре</li>
+              <li>Создаёт адаптивную вёрстку без ручной правки</li>
+              <li>Вставляет оглавление, мета-теги, Open Graph</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <h3 class="impl-block__title">Стилизация</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Сохраняет существующий стиль блога: шрифты, отступы, цвета</li>
+              <li>Или создаёт дизайн с нуля, если блога ещё нет</li>
+              <li>Единый вид всех статей — без плывущей вёрстки</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+              <h3 class="impl-block__title">Изображения</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Сжатие и конвертация в WebP для быстрой загрузки</li>
+              <li>Подписи и alt-тексты из контекста статьи</li>
+            </ul>
+          </div>
+
+          <div class="impl-block impl-block--wide fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <h3 class="impl-block__title">Публикация</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Готовый HTML вставляется в Tilda или на свой сайт</li>
+              <li>Можно настроить автопубликацию — статья появляется на сайте без ручных действий</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CTA -->
+    <section class="case-cta">
+      <div class="container container--narrow">
+        <div class="case-cta__card fade-up">
+          <h2 class="case-cta__title">Хотите убрать вёрстку из процесса?</h2>
+          <p class="case-cta__text">Настрою систему под стиль вашего сайта. Ваша команда отправляет текст — получает готовый код страницы.</p>
+          <div class="case-cta__buttons">
+            <a href="https://t.me/Vachos" class="btn btn--white" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              Обсудить в Telegram
+            </a>
+            <a href="mailto:denis.ganshin@enjoyers.org" class="btn btn--white-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; 2025–2026 Денис Ганшин</span>
+      <span class="footer__role">AI-архитектор бизнес-процессов</span>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Header scroll effect
+      const header = document.getElementById('header');
+      const onScroll = () => {
+        header.classList.toggle('header--scrolled', window.scrollY > 10);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Intersection Observer animations
+      const elements = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (!entry.isIntersecting) return;
+              const parent = entry.target.parentElement;
+              const siblings = [...parent.querySelectorAll(':scope > .fade-up')];
+              const idx = siblings.filter(s => !s.classList.contains('visible')).indexOf(entry.target);
+              entry.target.style.transitionDelay = `${Math.max(0, idx) * 70}ms`;
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+        );
+        elements.forEach(el => observer.observe(el));
+      } else {
+        elements.forEach(el => el.classList.add('visible'));
+      }
+    });
+  </script>
+
+<script src="lightbox.js"></script>
+<script src="gallery-nav.js"></script>
+</body>
+</html>

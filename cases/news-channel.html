@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автоматический новостной канал — кейс | Денис Ганшин</title>
+  <meta name="description" content="Telegram-канал на автопилоте: парсинг 15+ источников, AI-фильтрация, перевод и публикация без ручной работы.">
+  <meta property="og:title" content="Автоматический новостной канал — кейс">
+  <meta property="og:description" content="Telegram-канал на автопилоте: парсинг 15+ источников, AI-фильтрация, перевод и публикация без ручной работы.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case.css?v=6">
+  <style>
+    :root {
+      --bg-warm: #f5faf3;
+      --accent: #2d8a56;
+      --accent-hover: #24704a;
+      --accent-soft: #5cb87e;
+      --accent-bg: rgba(45, 138, 86, 0.06);
+      --accent-bg-strong: rgba(45, 138, 86, 0.12);
+      --border-hover: rgba(45, 138, 86, 0.25);
+    }
+    .btn:hover { box-shadow: 0 6px 24px rgba(45, 138, 86, 0.28); }
+    .btn--ghost:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); box-shadow: none; }
+    .contacts__card { background: linear-gradient(135deg, #2d8a56, #5cb87e); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="header__logo">Денис Ганшин</a>
+      <a href="../index.html#portfolio" class="header__back">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+        Назад к кейсам
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. Hero: слева карточка, справа мокап -->
+    <section class="case-hero">
+      <div class="container container--narrow">
+        <div class="case-hero__grid fade-up">
+          <div class="case-hero__inner">
+            <h1 class="case-hero__title">Автоматический новостной канал</h1>
+            <p class="case-hero__subtitle">Парсит 15+ источников, AI оценивает релевантность, переводит и публикует в Telegram. Канал работает сам — без редактора.</p>
+            <div class="case-hero__metrics">
+              <div class="case-hero__metric">
+                <span class="case-hero__metric-value">0 мин</span>
+                <span class="case-hero__metric-label">ручной работы</span>
+              </div>
+              <div class="case-hero__metric">
+                <span class="case-hero__metric-value">24/7</span>
+                <span class="case-hero__metric-label">публикации</span>
+              </div>
+              <div class="case-hero__metric">
+                <span class="case-hero__metric-value">15+</span>
+                <span class="case-hero__metric-label">источников</span>
+              </div>
+              <div class="case-hero__metric">
+                <span class="case-hero__metric-value">AI</span>
+                <span class="case-hero__metric-label">фильтр</span>
+              </div>
+            </div>
+            <div class="case-hero__tags">
+              <span class="tag">Python</span>
+              <span class="tag">GPT-4.1</span>
+              <span class="tag">Telegram API</span>
+              <span class="tag">n8n</span>
+              <span class="tag">RSS</span>
+            </div>
+          </div></div>
+      </div>
+    </section>
+
+    <!-- 2. Проблема + Решение -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <div class="problem-solution fade-up">
+          <div class="problem-solution__col">
+            <span class="problem-solution__badge problem-solution__badge--problem">Проблема</span>
+            <ul class="problem-bullets">
+              <li>Ручное ведение новостного канала — 3+ часа в день на мониторинг и публикации</li>
+              <li>Новости на английском — нужно переводить, адаптировать, форматировать</li>
+              <li>Пропускаешь важное — невозможно следить за 15+ источниками одновременно</li>
+              <li>Нерегулярные публикации — подписчики теряют интерес</li>
+            </ul>
+          </div>
+          <div class="problem-solution__divider"></div>
+          <div class="problem-solution__col">
+            <span class="problem-solution__badge problem-solution__badge--solution">Решение</span>
+            <p class="problem-solution__text">Полностью автоматический пайплайн: парсинг → фильтрация → перевод → публикация. Канал работает 24/7 без участия человека.</p>
+            <p class="problem-solution__text">AI оценивает релевантность каждой новости по заданным критериям. Переводит, адаптирует стиль, форматирует для Telegram.</p>
+            <p class="problem-solution__text">Настраиваемая частота: от 3 до 20 публикаций в день. Дайджесты, тематические подборки, срочные новости.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Стек технологий (перед функциональностью) -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <h2 class="case-section__title fade-up">Стек технологий</h2>
+        <div class="stack-detail">
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#10a37f">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">LLM</span>
+              <span class="stack-detail__name">GPT-4.1</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#3776ab">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Парсинг</span>
+              <span class="stack-detail__name">Python + RSS</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#6366f1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Автоматизация</span>
+              <span class="stack-detail__name">n8n</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#26A5E4">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Мессенджер</span>
+              <span class="stack-detail__name">Telegram Bot API</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#10a37f">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Перевод</span>
+              <span class="stack-detail__name">GPT-4.1 (multilingual)</span>
+            </div>
+          </div>
+          <div class="stack-detail__item fade-up">
+            <div class="stack-detail__icon" style="background:#3ECF8E">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"/></svg>
+            </div>
+            <div class="stack-detail__info">
+              <span class="stack-detail__label">Хранение</span>
+              <span class="stack-detail__name">Supabase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Функциональность (2 колонки) -->
+    <section class="case-section">
+      <div class="container container--narrow">
+        <h2 class="case-section__title fade-up">Функциональность</h2>
+        <div class="impl-blocks impl-blocks--grid">
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <h3 class="impl-block__title">Парсинг источников</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Мониторит 15+ RSS-фидов, сайтов, каналов</li>
+              <li>Извлекает заголовок, текст, изображение, источник</li>
+              <li>Детектит дубли и обновления</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+              </div>
+              <h3 class="impl-block__title">AI-фильтрация</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Оценивает релевантность по заданной теме</li>
+              <li>Скорит важность: breaking > trend > regular</li>
+              <li>Отсекает рекламу, спам, нерелевантное</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 class="impl-block__title">Перевод и адаптация</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Переводит с английского, сохраняя смысл</li>
+              <li>Адаптирует стиль под формат Telegram-канала</li>
+              <li>Добавляет эмодзи, форматирование, ссылки</li>
+            </ul>
+          </div>
+
+          <div class="impl-block fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </div>
+              <h3 class="impl-block__title">Публикация</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Автоматический постинг по расписанию</li>
+              <li>Срочные новости — моментально</li>
+              <li>Ежедневные дайджесты с главным за день</li>
+            </ul>
+          </div>
+
+          <div class="impl-block impl-block--wide fade-up">
+            <div class="impl-block__header">
+              <div class="impl-block__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+              </div>
+              <h3 class="impl-block__title">Аналитика и настройка</h3>
+            </div>
+            <ul class="impl-block__list">
+              <li>Статистика просмотров и вовлечённости</li>
+              <li>A/B тестирование заголовков</li>
+              <li>Автоподстройка частоты по активности аудитории</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CTA -->
+    <section class="case-cta">
+      <div class="container container--narrow">
+        <div class="case-cta__card fade-up">
+          <h2 class="case-cta__title">Хотите канал на автопилоте?</h2>
+          <p class="case-cta__text">Расскажите тему — запущу автоматический канал за неделю</p>
+          <div class="case-cta__buttons">
+            <a href="https://t.me/Vachos" class="btn btn--white" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              Обсудить в Telegram
+            </a>
+            <a href="mailto:denis.ganshin@enjoyers.org" class="btn btn--white-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; 2025–2026 Денис Ганшин</span>
+      <span class="footer__role">AI-архитектор бизнес-процессов</span>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Header scroll effect
+      const header = document.getElementById('header');
+      const onScroll = () => {
+        header.classList.toggle('header--scrolled', window.scrollY > 10);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Intersection Observer animations
+      const elements = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (!entry.isIntersecting) return;
+              const parent = entry.target.parentElement;
+              const siblings = [...parent.querySelectorAll(':scope > .fade-up')];
+              const idx = siblings.filter(s => !s.classList.contains('visible')).indexOf(entry.target);
+              entry.target.style.transitionDelay = `${Math.max(0, idx) * 70}ms`;
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+        );
+        elements.forEach(el => observer.observe(el));
+      } else {
+        elements.forEach(el => el.classList.add('visible'));
+      }
+    });
+  </script>
+
+<script src="lightbox.js"></script>
+<script src="gallery-nav.js"></script>
+</body>
+</html>
