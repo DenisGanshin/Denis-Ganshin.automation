@@ -11,29 +11,17 @@
   <meta property="og:locale" content="ru_RU">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    :root {
-      --bg-warm: #f5faf3;
-      --accent: #2d8a56;
-      --accent-hover: #24704a;
-      --accent-soft: #5cb87e;
-      --accent-bg: rgba(45, 138, 86, 0.06);
-      --accent-bg-strong: rgba(45, 138, 86, 0.12);
-      --border-hover: rgba(45, 138, 86, 0.25);
-    }
-    .btn:hover { box-shadow: 0 6px 24px rgba(45, 138, 86, 0.28); }
-    .btn--ghost:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); box-shadow: none; }
-    .contacts__card { background: linear-gradient(135deg, #2d8a56, #5cb87e); }
-  </style>
 </head>
 <body>
 
   <!-- Header -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#" class="header__logo">Денис Ганшин</a>
+      <a href="#" class="header__logo">Денис Ганшин<span>.</span></a>
       <nav class="header__nav" id="nav">
         <a href="#services" class="header__link">Продукты</a>
         <a href="#process" class="header__link">Процесс</a>
@@ -53,25 +41,34 @@
 
     <!-- Hero -->
     <section class="hero" id="hero">
+      <div class="hero__mesh"></div>
       <div class="container hero__grid">
         <div class="hero__content">
           <div class="hero__badge fade-up">AI-архитектор бизнес-процессов</div>
-          <h1 class="hero__title fade-up">Строю AI&#8209;системы, которые снимают операционку с&nbsp;вашей команды</h1>
+          <h1 class="hero__title fade-up">Меньше ручного труда — больше результата</h1>
           <ul class="hero__bullets fade-up">
-            <li>AI-парсеры, боты и CRM-интеграции экономят <strong>20+ часов в&nbsp;месяц</strong></li>
-            <li><strong>2–4 недели</strong> от первого созвона до рабочей системы</li>
-            <li>Опыт операционного управления <strong>в 5+ компаниях</strong></li>
+            <li>От идеи до системы — <strong>2–4 недели</strong></li>
+            <li>Экономлю <strong>десятки часов</strong> команды каждый месяц</li>
+            <li>Бэкграунд <strong>COO в 5 компаниях</strong></li>
           </ul>
           <div class="hero__actions fade-up">
-            <a href="#contacts" class="btn">Обсудить задачу</a>
+            <a href="#contacts" class="btn btn--magnetic" id="heroCta">Обсудить задачу</a>
           </div>
           <p class="hero__call-info fade-up">На созвоне: разберём ваши процессы, найдём узкие места и предложу конкретные решения для автоматизации.</p>
         </div>
         <div class="hero__visual fade-up">
           <div class="hero__blob"></div>
           <div class="hero__photo-wrapper">
-            <img src="img/denis/photo-hero.png" alt="Денис Ганшин" width="420" height="420">
-            <div class="hero__photo-decor"></div>
+            <div class="hero__card">
+              <div class="hero__card-face hero__card-front">
+                <img src="img/denis/photo-hero.png" alt="Денис Ганшин" width="420" height="420">
+                <div class="hero__photo-decor"></div>
+              </div>
+              <div class="hero__card-face hero__card-back">
+                <img src="img/photo_2026-04-27_20-59-41.jpg" alt="Денис Ганшин" width="420" height="420">
+                <div class="hero__photo-decor hero__photo-decor--back"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -196,12 +193,12 @@
           </div>
           <div class="about__text">
             <h2 class="section-title" style="margin-bottom:20px; font-size:1.85rem; line-height:1.25">5 лет я строил процессы и управлял операционкой. Теперь автоматизирую её с&nbsp;помощью AI.</h2>
-            <p>Меня зовут Денис. Я прошёл путь от B2B-продаж и видеопродакшна до со-основания туристической компании <a href="https://enjoyers.org/" target="_blank" rel="noopener" style="color:var(--accent)">Enjoyers Travel</a> и операционного управления в&nbsp;Catharsis Group.</p>
-            <p>Внутри своих проектов строил AI-автоматизации — парсеры, CRM-интеграции, ботов для продаж. Теперь внедряю такие системы в&nbsp;проекты клиентов.</p>
+            <p>Не теоретик. Строил процессы и автоматизацию внутри реального бизнеса и <a href="https://enjoyers.org/" target="_blank" rel="noopener" style="color:var(--accent)">своих проектов</a>. Знаю, где бизнес теряет время и деньги — и как это убрать.</p>
+            <p>Теперь внедряю те же решения в клиентские проекты: убираю ручной труд, связываю сервисы и довожу процессы до работающей системы.</p>
           </div>
         </div>
         <div class="about__banner fade-up">
-          <div class="about__banner-item"><span class="about__banner-num">1 000+</span><span class="about__banner-text">проданных мест и 50+ туров в Enjoyers Travel</span></div>
+          <div class="about__banner-item"><span class="about__banner-num">−90%</span><span class="about__banner-text">нагрузка на менеджеров по продажам в Enjoyers Travel</span></div>
           <div class="about__banner-item"><span class="about__banner-num">В 4 раза</span><span class="about__banner-text">ускорил создание карточек лидов через интеграцию Bitrix24 + Telegram</span></div>
           <div class="about__banner-item"><span class="about__banner-num">20 ч/мес</span><span class="about__banner-text">экономит AI-парсер мероприятий, разработанный для Catharsis Group</span></div>
         </div>

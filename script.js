@@ -1,5 +1,89 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+
+  // ===== Magnetic Button =====
+  (() => {
+    const btn = document.getElementById('heroCta');
+    if (!btn) return;
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width / 2;
+      const y = e.clientY - r.top - r.height / 2;
+      btn.style.transform = `translate(${x * 0.22}px, ${y * 0.3}px) translateY(-2px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  })();
+
+  // ===== 3D Photo Tilt + Card Flip =====
+  (() => {
+    const wrapper = document.querySelector('.hero__photo-wrapper');
+    const card    = document.querySelector('.hero__card');
+    const visual  = document.querySelector('.hero__visual');
+    if (!wrapper || !card || !visual) return;
+
+    let flipped  = false;
+    let dragging = false;
+    let startX   = 0;
+
+    const THRESHOLD = 55;
+
+    const snapCard = () => {
+      card.style.transition = 'transform 0.65s cubic-bezier(0.4,0,0.2,1)';
+      card.style.transform  = `rotateY(${flipped ? 180 : 0}deg)`;
+      setTimeout(() => { card.style.transition = ''; }, 650);
+    };
+
+    // Tilt (disabled only while dragging)
+    visual.addEventListener('mousemove', e => {
+      if (dragging) return;
+      const r = visual.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width  - 0.5;
+      const y = (e.clientY - r.top)  / r.height - 0.5;
+      const rx = flipped ? -x : x;
+      wrapper.style.transform = `perspective(900px) rotateY(${rx * 9}deg) rotateX(${-y * 6}deg)`;
+    });
+    visual.addEventListener('mouseleave', () => {
+      if (dragging) return;
+      wrapper.style.transition = 'transform 0.7s cubic-bezier(0.4,0,0.2,1)';
+      wrapper.style.transform = 'perspective(900px) rotateY(0deg) rotateX(0deg)';
+      setTimeout(() => { wrapper.style.transition = ''; }, 700);
+    });
+
+    // Drag to flip
+    const dragStart = (x) => {
+      dragging = true;
+      startX   = x;
+      card.style.transition    = 'none';
+      wrapper.style.transition = 'none';
+      wrapper.style.transform  = 'perspective(900px)';
+    };
+    const dragMove = (x) => {
+      if (!dragging) return;
+      const delta   = x - startX;
+      const base    = flipped ? 180 : 0;
+      const raw     = base + delta * 0.55;
+      const clamped = flipped
+        ? Math.max(80,  Math.min(200, raw))
+        : Math.max(-20, Math.min(180, raw));
+      card.style.transform = `rotateY(${clamped}deg)`;
+    };
+    const dragEnd = (x) => {
+      if (!dragging) return;
+      dragging = false;
+      const delta = x - startX;
+      if (!flipped && delta > THRESHOLD)      flipped = true;
+      else if (flipped && delta < -THRESHOLD) flipped = false;
+      snapCard();
+    };
+
+    wrapper.addEventListener('mousedown',  e => { e.preventDefault(); dragStart(e.clientX); });
+    window.addEventListener('mousemove',   e => dragMove(e.clientX));
+    window.addEventListener('mouseup',     e => dragEnd(e.clientX));
+    wrapper.addEventListener('touchstart', e => dragStart(e.touches[0].clientX), { passive: true });
+    window.addEventListener('touchmove',   e => { if (dragging) dragMove(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('touchend',    e => dragEnd(e.changedTouches[0].clientX));
+  })();
+
   // ===== Header scroll effect =====
   const header = document.getElementById('header');
   let lastScroll = 0;
@@ -77,17 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, 700);
   })();
 
-  // ===== Parallax hero photo =====
-  (() => {
-    const photo = document.querySelector('.hero__photo-wrapper');
-    const hero = document.querySelector('.hero');
-    if (!photo || !hero) return;
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      if (y > hero.offsetHeight) return;
-      photo.style.transform = `translateY(${y * 0.12}px)`;
-    }, { passive: true });
-  })();
+  // parallax replaced by 3D tilt above
 
   // ===== Counter animation for about banner =====
   (() => {
@@ -95,9 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!banner) return;
     const animateNum = (el) => {
       const text = el.textContent.trim();
-      const match = text.match(/\d[\d\s]*/);
+      const match = text.match(/[-−]?\d[\d\s]*/);
       if (!match) return;
-      const target = parseInt(match[0].replace(/\s/g, ''));
+      const target = parseInt(match[0].replace(/−/g, '-').replace(/\s/g, ''));
       const prefix = text.slice(0, match.index);
       const suffix = text.slice(match.index + match[0].length);
       const duration = 1400;
